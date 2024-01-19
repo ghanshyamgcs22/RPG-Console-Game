@@ -14,7 +14,7 @@ Welcome to the Text-Based RPG Adventure, an open-source console game written in 
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/ghanshyamgcs22/RPGConsoleGame_usingCpp.git`
+1. Clone the repository: `git clone https://github.com/ghanshyamgcs22/RPG-Console.git`
 2. Compile the code: `g++ -o game main.cpp -std=c++11`
 3. Run the game: `./game`
 
