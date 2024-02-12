@@ -1,14 +1,12 @@
 #pragma once
-#include<sstream>
-#include"function.h"
+
 #include"Event.h"
-#include"ghanshyam.h"
-#include<iomanip>
+
 #include<vector>
-#include<iostream>
 //#include<fstream>
+
 using namespace std;
-#include<ctime>
+
 class Game
 {
 public:
@@ -30,23 +28,20 @@ public:
 
 	void selectCharacter();
 
-
-		//accessors
+	//accessors
 	inline bool getPlaying()const { return this->playing; }
 	//modifiers
 private:
 	int choice;
 	bool playing;
-  
 
 	//character related
-	int activeveChar;
+	int activeChar;
 	vector<character> chartr;
 	string fileName;
 
 	//enemies
 	dArr<Enemey>enemies;
-
 };
 
 
