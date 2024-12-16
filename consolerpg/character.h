@@ -1,12 +1,12 @@
 #pragma once
-#include<iostream>
-#include<iomanip>
+
 #include"inventory.h"
 #include"baseClass.h"
-#include"Enemey.h";
+#include"Enemey.h"
+
 using namespace std;
 
-class character:public baseClass
+class character :public baseClass
 {
 public:
 	character();
@@ -16,18 +16,18 @@ public:
 
 	//Function
 	void initialize(const std::string name);
-	void restExp(int time){
-		if (this->exp >0)
+	void restExp(int time) {
+		if (this->exp > 0)
 		{
-			this->exp = this->exp - rand() %time;
-	}
+			this->exp = this->exp - rand() % time;
+		}
 
 	}
-	void  printStats()const;
+	void printStats()const;
 	void levelUp();
-	 virtual string getAsString()const;
+	virtual string getAsString()const;
 	void updateStats();
-	void addToStat(int stat,int  value);
+	void addToStat(int stat, int  value);
 	//acessor
 
 	//inline const int& getX()const { return this->xpos; }
@@ -44,7 +44,7 @@ public:
 	inline const int& getStamina()const { return this->stamina; }
 	inline const int& getDamageMin()const { return this->damageMin; }
 	inline const int& getDamageMax()const { return this->damageMax; }
-	inline const int& getDamage()const { return (rand() % (this->damageMax - this->damageMin))+this->damageMin; }
+	inline const int& getDamage()const { return (rand() % (this->damageMax - this->damageMin)) + this->damageMin; }
 	inline const int& getDefence()const { return this->defence; }
 	inline const int& getAccuracy()const
 	{
@@ -56,9 +56,10 @@ public:
 	//modifier
 	inline void setDistTravelled(const int& distance) { this->distanceTravelled = distance; }
 	inline void travel() { this->distanceTravelled++; }
-	inline void gainExp(const int& exp) { 
+	inline void gainExp(const int& exp) {
 		cout << "your exp is increased by" << exp << "\n";
-		this->exp += exp;}
+		this->exp += exp;
+	}
 	void takeDamage(const int damage);
 private:
 	//double xpos;
@@ -94,14 +95,8 @@ private:
 	int defence;
 	int accuracy;
 	int luck;
-	
+
 	int statPoints;
 	int skillPoints;
-
-
-
-
-
-
 };
 
